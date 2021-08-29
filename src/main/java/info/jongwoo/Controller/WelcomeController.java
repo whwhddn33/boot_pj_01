@@ -1,4 +1,4 @@
-package info.jongwoo.Boot_pj_01;
+package info.jongwoo.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
