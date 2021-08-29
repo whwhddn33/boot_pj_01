@@ -8,6 +8,6 @@ public class WelcomeController {
 	
 	@GetMapping
 	public String Welcome() {
-		return "this is firstBootPJ r";
+		return "this is firstBootPJ retest";
 	}
 }
