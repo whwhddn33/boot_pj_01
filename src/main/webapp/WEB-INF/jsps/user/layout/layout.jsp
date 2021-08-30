@@ -13,30 +13,22 @@
 
     <title>Decode Community</title>
 
-<%--    <link href="/assets/css/reset.css" rel="stylesheet">--%>
     <link href="/assets/css/swiper.min.css" rel="stylesheet">
+    <link href="/assets/css/reset.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
     <link href="/assets/css/datepicker.css" rel="stylesheet" />
-
 
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/swiper.min.js"></script>
     <script src="/assets/js/validation.js"></script>
     <script src="/assets/js/datepicker.js"></script>
     <script src="/assets/js/datepicker.kr.js"></script>
-
 </head>
-
-<body>
-<div class="wrap">
-    <div class="inner">
-        <t:insertAttribute name="header" />
-
-        <t:insertAttribute name="body" />
-
-        <t:insertAttribute name="footer" />
-    </div>
-</div>
-</body>
+	
+		<t:insertAttribute name="header" />
+	
+		<t:insertAttribute name="body" />
+	
+		<t:insertAttribute name="footer" />
 
 </html>

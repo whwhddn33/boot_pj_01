@@ -3,7 +3,6 @@
 <%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="t" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-
 <footer>
-    <div>얖 푸터</div>
+    <div>Copyright</div>
 </footer>
