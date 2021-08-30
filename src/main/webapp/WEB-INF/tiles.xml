@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="mainlayout" template="/WEB-INF/jsps/user/layout/layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/jsps/user/layout/header.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsps/user/layout/footer.jsp" />
+    </definition>
+
+    <!-- 사용자 레이아웃 -->
+    <definition name="/*.decode" extends="mainlayout">
+        <put-attribute name="body" value="/WEB-INF/jsps/user/{1}.jsp" />
+    </definition>
+    <definition name="/*/*.decode" extends="mainlayout">
+        <put-attribute name="body" value="/WEB-INF/jsps/user/{1}/{2}.jsp" />
+    </definition>
+    <definition name="/*/*/*.decode" extends="mainlayout">
+        <put-attribute name="body" value="/WEB-INF/jsps/user/{1}/{2}/{3}.jsp" />
+    </definition>
+    <definition name="/*/*/*/*.decode" extends="mainlayout">
+        <put-attribute name="body" value="/WEB-INF/jsps/user/{1}/{2}/{3}/{4}.jsp" />
+    </definition>
+
+
+</tiles-definitions>
