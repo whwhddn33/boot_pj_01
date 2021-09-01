@@ -24,8 +24,9 @@ public class UserMainController {
         UserDTO userDTO = new UserDTO();
         userDTO.setId("test4");
         userDTO.setPassword("4444");
-
         userService.userInsert(userDTO);
+        userDTO.setId("test5");
+        userDTO.setPassword("5555");
 
         List<UserDTO> userList = userService.userList();
         modelAndView.addObject("userList", userList);
