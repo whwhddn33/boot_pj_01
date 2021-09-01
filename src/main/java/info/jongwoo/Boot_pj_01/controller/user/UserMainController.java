@@ -21,6 +21,12 @@ public class UserMainController {
     public ModelAndView main(Model model) throws Exception {
         ModelAndView modelAndView = new ModelAndView("/main"+Const.uTiles);
 
+        UserDTO userDTO = new UserDTO();
+        userDTO.setId("test4");
+        userDTO.setPassword("4444");
+
+        userService.userInsert(userDTO);
+
         List<UserDTO> userList = userService.userList();
         modelAndView.addObject("userList", userList);
 

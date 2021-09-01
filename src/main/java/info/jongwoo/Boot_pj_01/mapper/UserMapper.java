@@ -10,4 +10,6 @@ public interface UserMapper {
 
     List<UserDTO> userList() throws Exception;
 
+    void userInsert(UserDTO userDTO) throws Exception;
+
 }

@@ -7,5 +7,12 @@
         SELECT * FROM users
     </select>
 
+    <insert id="userInsert" parameterType="info.jongwoo.Boot_pj_01.domain.UserDTO">
+        insert into users
+        (id, password)
+        values
+        (#{id, jdbcType=VARCHAR} , #{password, jdbcType=VARCHAR})
+    </insert>
+
 
 </mapper>

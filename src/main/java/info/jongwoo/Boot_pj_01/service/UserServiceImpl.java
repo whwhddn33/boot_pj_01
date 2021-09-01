@@ -20,4 +20,9 @@ public class UserServiceImpl implements UserSerivce {
         return userMapper.userList();
     }
 
+    @Override
+    public void userInsert(UserDTO userDTO) throws Exception {
+        userMapper.userInsert(userDTO);
+    }
+
 }
