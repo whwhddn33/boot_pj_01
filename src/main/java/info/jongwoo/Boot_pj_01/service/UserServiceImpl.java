@@ -15,7 +15,10 @@ public class UserServiceImpl implements UserSerivce {
     private UserMapper userMapper;
 
     @Override
-    public List<UserDTO> userList() throws Exception {
+    public List<UserDTO> userList(UserDTO udto) throws Exception {
+
+        udto.setId(udto.getId());
+        udto.setPassword(udto.getPassword());
         return userMapper.userList();
     }
 

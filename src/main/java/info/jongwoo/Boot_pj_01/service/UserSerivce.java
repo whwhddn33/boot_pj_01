@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserSerivce {
 
-    List<UserDTO> userList() throws Exception;
+    List<UserDTO> userList(UserDTO udto) throws Exception;
 
     void userInsert(UserDTO userDTO) throws Exception;
 

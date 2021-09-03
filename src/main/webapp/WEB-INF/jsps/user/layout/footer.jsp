@@ -5,5 +5,5 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <footer>
-    <div>얖 푸터</div>
+    <div>Copyright</div>
 </footer>

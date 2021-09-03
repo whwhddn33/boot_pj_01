@@ -16,9 +16,8 @@
 <%--    <link href="/assets/css/reset.css" rel="stylesheet">--%>
     <link href="/assets/css/swiper.min.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/reset.css" rel="stylesheet">
     <link href="/assets/css/datepicker.css" rel="stylesheet" />
-
-
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/swiper.min.js"></script>
     <script src="/assets/js/validation.js"></script>
@@ -29,13 +28,11 @@
 
 <body>
 <div class="wrap">
-    <div class="inner">
-        <t:insertAttribute name="header" />
-
+    <t:insertAttribute name="header" />
+    <div class = "body">
         <t:insertAttribute name="body" />
-
-        <t:insertAttribute name="footer" />
     </div>
+    <t:insertAttribute name="footer" />
 </div>
 </body>
 
