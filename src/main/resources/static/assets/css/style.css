@@ -9,6 +9,9 @@ header{
     top:0;
     overflow:hidden;
 }
+
+header a:visited { color: white; text-decoration: none;}
+header a:hover { color: blue; text-decoration: underline;}
 .body{
     margin-top:10vh;
     height: 85vh;
@@ -54,4 +57,22 @@ table.user-list-table {
 }
 table.user-list-table th, table.user-list-table td {
     border: 1px solid #444444;
+}
+
+#study-content{
+    display: flex;
+    gap: 4vw;
+}
+
+.board_list_wrap{
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+.board_no{
+    flex: 1;
+}
+
+.board_title{
+    flex: 3;
 }

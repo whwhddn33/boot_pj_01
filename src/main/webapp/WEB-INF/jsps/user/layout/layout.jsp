@@ -12,8 +12,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Community</title>
-
-<%--    <link href="/assets/css/reset.css" rel="stylesheet">--%>
     <link href="/assets/css/swiper.min.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
     <link href="/assets/css/reset.css" rel="stylesheet">

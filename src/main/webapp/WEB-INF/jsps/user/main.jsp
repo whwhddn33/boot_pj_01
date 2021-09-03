@@ -5,7 +5,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <div id = "main-content">
     <div class = "main left">
-        <h1>아 개발 JoonNx 오랜만에 한다 눈물나네 ㅜ</h1>
+        <h1>아 개발 너무 오랜만에 한다...</h1>
         <table class="user-list-table">
             <thead>
                 <tr>

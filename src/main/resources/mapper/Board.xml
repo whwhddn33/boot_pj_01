@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="info.jongwoo.Boot_pj_01.mapper.BoardMapper">
+
+    <select id="boardList" resultType="info.jongwoo.Boot_pj_01.domain.BoardDTO">
+        SELECT * FROM board
+    </select>
+
+</mapper>
