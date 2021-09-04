@@ -7,7 +7,9 @@
 
 
     <div class = "main left board">
-
+    <div class = "page-title">
+        <span class = "title-span">DEV LOG</span>
+    </div>
         <div id = "board-list-background">
 
             <div class = "board_list_wrap">

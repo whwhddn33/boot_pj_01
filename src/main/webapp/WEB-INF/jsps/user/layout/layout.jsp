@@ -14,6 +14,7 @@
     <title>Community</title>
     <link href="/assets/css/swiper.min.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/responsive.css" rel="stylesheet">
     <link href="/assets/css/reset.css" rel="stylesheet">
     <link href="/assets/css/datepicker.css" rel="stylesheet" />
     <script src="/assets/js/jquery-3.6.0.min.js"></script>

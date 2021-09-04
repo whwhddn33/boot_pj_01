@@ -148,3 +148,15 @@ table.user-list-table th, table.user-list-table td {
     height: 60vh;
     overflow: auto;
 }
+
+
+.page-title{
+    width: 100%;
+    font-size: 2vw;
+    font-weight: bold;
+    margin-bottom: 1vh;
+    padding-bottom: .2vh;
+}
+.title-span{
+    border-bottom: 2px solid;
+}
