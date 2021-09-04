@@ -4,7 +4,12 @@
 <mapper namespace="info.jongwoo.Boot_pj_01.mapper.BoardMapper">
 
     <select id="boardList" resultType="info.jongwoo.Boot_pj_01.domain.BoardDTO">
-        SELECT * FROM board
+        SELECT bno,btitle FROM board
+    </select>
+
+    <select id = "getItem" resultType="info.jongwoo.Boot_pj_01.domain.BoardDTO">
+        SELECT bcontent FROM board
+        WHERE bno = #{bno};
     </select>
 
 </mapper>

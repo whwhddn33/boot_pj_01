@@ -22,4 +22,10 @@ public class BoardServiceImpl implements BoardService{
 
         return boardMapper.boardList(bdto);
     }
+
+    @Override
+    public BoardDTO getItem(int bno) {
+
+        return boardMapper.getItem(bno);
+    }
 }

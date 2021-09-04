@@ -8,4 +8,5 @@ public interface BoardService {
 
     List<BoardDTO> boardList(BoardDTO bdto) throws Exception;
 
+    BoardDTO getItem(int bno);
 }
