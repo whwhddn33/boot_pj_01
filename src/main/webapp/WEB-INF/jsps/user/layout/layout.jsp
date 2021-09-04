@@ -17,6 +17,9 @@
     <link href="/assets/css/responsive.css" rel="stylesheet">
     <link href="/assets/css/reset.css" rel="stylesheet">
     <link href="/assets/css/datepicker.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/swiper.min.js"></script>
     <script src="/assets/js/validation.js"></script>

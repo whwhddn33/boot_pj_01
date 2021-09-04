@@ -160,3 +160,77 @@ table.user-list-table th, table.user-list-table td {
 .title-span{
     border-bottom: 2px solid;
 }
+
+#board-btn-area{
+    margin: 2vh 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+
+.basic-btn{
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #fc8b74 0%, #ffb07b 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.write-area{
+    display: none;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    border: 2px dashed;
+}
+
+.write-title-wrapper{
+    height: 10%;
+    border-bottom: 1px solid;
+    width: 100%;
+    padding: 1vh 1vw;
+    display: flex;
+    align-items: center;
+}
+
+.title-notice{
+    flex: 1;
+    justify-content: center;
+}
+.title-content{
+    flex:5;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #999999;
+}
+
+.write-title{
+    display: flex;
+}
+.write-content-wrapper{
+    padding: 1vh 1vw;
+    height: 90%;
+    width: 100%;
+}
+
+.write-content{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.basic-btn.write-btn{
+    visibility: hidden;
+}
+
