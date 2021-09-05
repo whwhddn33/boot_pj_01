@@ -94,27 +94,46 @@
         });
     });
 
-    $("#board-btn-area").on("click",".basic-btn",function(){
+    $("#board-btn-area").on("click",".basic-btn",function() {
 
-        if($(this).text() == "글쓰기"){
+        if ($(this).text() == "글쓰기") {
             $(this).text("목록으로")
             $(".board_list_wrap").hide();
             $(".write-area").show();
             $(".write-btn").css("visibility", "visible");
-        }else if($(this).text() == "목록으로"){
+        } else if ($(this).text() == "목록으로") {
             $(this).text("글쓰기");
             $(".write-area").hide();
             $(".board_list_wrap").show();
             $(".write-btn").css("visibility", "hidden");
-        }/*else{
-            $.ajax({
-                url:"/list/regist",
-                contentType:"application/json",
-                data:$(""),
-                type:
-            })
-        }*/
+        } else {
+            var btitle = $(".title-content").text();
+            var bcontent = $(".write-content").text();
+            var bdto = {btitle,bcontent};
 
+
+            if(btitle != ''||bcontent!=''){
+                $.ajax({
+                    type: "post",
+                    url: "/list/regist",
+                    data:JSON.stringify(bdto),
+                    contentType: "application/json;",
+                    success:function(result){
+                        $(".basic-btn.change").text("글쓰기");
+                        $(".write-area").hide();
+                        $(".board_list_wrap").show();
+                        $(".write-btn").css("visibility", "hidden");
+                    },
+                    error: function (rstats,textstat,err) {
+                        console.log(rstats)
+                        console.log(textstat)
+                        console.log(err)
+                    }
+                });
+            }else{
+                alert("제목,내용이 비었습니다.")
+            }
+        }
     });
 
 

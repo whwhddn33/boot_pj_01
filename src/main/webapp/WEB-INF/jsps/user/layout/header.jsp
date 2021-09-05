@@ -10,9 +10,9 @@
     <div class = "nav">
         <a class = "nava nava-1" href="/">HOME</a>
         <a class = "nava nava-2" href="/board/list">DEV LOG</a>
-        <a class = "nava nava-3" href="/chat">CHAT ROOM</a>
-        <a class = "nava nava-4" href="/nav4">NAV4</a>
-        <a class = "nava nava-5" href="/header">임시헤더</a>
+        <a class = "nava nava-3" href="/">CHAT ROOM</a>
+        <a class = "nava nava-4" href="/">NAV4</a>
+        <a class = "nava nava-5" href="/">임시헤더</a>
     </div>
 
 </header>

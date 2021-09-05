@@ -23,4 +23,19 @@ public class BoardRestController {
         log.info("request");
         return new ResponseEntity<BoardDTO>(boardService.getItem(bno), HttpStatus.OK);
     }
+    @PostMapping(value = "/regist",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.TEXT_PLAIN_VALUE)
+    public ResponseEntity<String> write(@RequestBody BoardDTO bdto){
+        log.info(bdto);
+        log.info("===========================================");
+        log.info("===========================================");
+        log.info("===========================================");
+        log.info("===========================================");
+        log.info("===========================================");
+        log.info("===========================================");
+        log.info("===========================================");
+        log.info("===========================================");
+        int insertCnt = boardService.register(bdto);
+        log.info(insertCnt);
+        return insertCnt == 1 ? new ResponseEntity<String>("success", HttpStatus.OK):new ResponseEntity<String>("fail",HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }

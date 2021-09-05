@@ -9,7 +9,12 @@
 
     <select id = "getItem" resultType="info.jongwoo.Boot_pj_01.domain.BoardDTO">
         SELECT bcontent FROM board
-        WHERE bno = #{bno};
+        WHERE bno = #{bno}
     </select>
+
+    <insert id = "register" parameterType="info.jongwoo.Boot_pj_01.domain.BoardDTO">
+        insert into board (btitle, bcontent)
+        values (#{btitle}, #{bcontent})
+    </insert>
 
 </mapper>

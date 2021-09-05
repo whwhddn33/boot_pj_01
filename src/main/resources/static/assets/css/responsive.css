@@ -15,4 +15,7 @@
         height: 30vh;
     }
 
+    #main-content{
+        flex-direction: column;
+    }
 }

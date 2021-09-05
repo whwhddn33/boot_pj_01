@@ -14,5 +14,4 @@
         (#{id, jdbcType=VARCHAR} , #{password, jdbcType=VARCHAR})
     </insert>
 
-
 </mapper>

@@ -8,5 +8,8 @@ import java.util.List;
 @Mapper
 public interface BoardMapper {
     List<BoardDTO> boardList(BoardDTO bdto) throws Exception;
+
     BoardDTO getItem(int bno);
+
+    int register(BoardDTO bdto);
 }
