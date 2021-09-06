@@ -4,7 +4,6 @@ package info.jongwoo.Boot_pj_01.controller.board;
 import info.jongwoo.Boot_pj_01.common.Const;
 import info.jongwoo.Boot_pj_01.domain.BoardDTO;
 import info.jongwoo.Boot_pj_01.service.BoardService;
-import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +16,6 @@ import java.util.List;
 @Controller
 @Log4j2
 @RequestMapping("/board")
-
 public class BoardController {
 
 
