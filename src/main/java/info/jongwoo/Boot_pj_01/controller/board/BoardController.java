@@ -23,14 +23,8 @@ public class BoardController {
     private BoardService boardService;
 
     @GetMapping("/list")
-    public ModelAndView board() throws Exception{
-
+    public ModelAndView board(){
         ModelAndView model = new ModelAndView("/board"+ Const.uTiles); // 모델객체
-
-        List<BoardDTO> boardList = boardService.boardList();
-        model.addObject("boardlist",boardList);
-        log.info(model.toString());
-
         return model;
     }
 }

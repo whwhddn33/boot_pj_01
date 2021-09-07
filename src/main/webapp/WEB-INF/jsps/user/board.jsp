@@ -38,13 +38,6 @@
             </div>
             <!--table head-->
             <!--table element-->
-            <c:forEach var="blist" items="${boardlist}">
-                <div class = "board_list_wrap contents">
-                    <div class = "board_no">${blist.bno}</div>
-                    <div class = "board_title">${blist.btitle}</div>
-                    <div class = "board_writer">작성자</div>
-                </div>
-            </c:forEach>
             <!--table element-->
         </div>
         <!--board-list-background-->
@@ -71,7 +64,13 @@
 
 <script>
     //view-title writer
-
+    $(document).ready(function(){
+        boardService.getList(
+            function(result){
+                writeList(result)
+            }
+        );
+    });
 
     $(".main").on("click",".board_list_wrap.contents",function() {
         $(".view-title").text($(this).find(".board_title").text());
@@ -117,12 +116,7 @@
                         $(".write-btn").css("visibility", "hidden");
                         boardService.getList(
                             function(result){
-                                console.log(result)
-                                var blast = result[result.length-1];
-                                var tag = '<div class="board_list_wrap contents" style="user-select: auto;"><div class="board_no" style="user-select: auto;">'+blast.bno+'</div><div class="board_title" style="user-select: auto;">'+blast.btitle+'</div><div class="board_writer" style="user-select: auto;">작성자</div></div>';
-                                console.log(tag);
-                                $("#board-list-background").append(tag)
-
+                                writeList(result)
                             }
                         );
                     }
@@ -133,5 +127,11 @@
             }
         }
     });
-
+    function writeList(result){
+        let tag = '<div class="write-area"><div class = "write-title-wrapper"><div class = "title-notice">제목 : </div><div class = "title-content" contenteditable="true"></div></div><div class = "write-content-wrapper"><div class = "write-content" contenteditable="true"></div></div></div>';
+        for (let i = 0; i<result.length; i++){
+            tag += '<div class="board_list_wrap contents" style="user-select: auto;"><div class="board_no" style="user-select: auto;">'+result[i].bno+'</div><div class="board_title" style="user-select: auto;">'+result[i].btitle+'</div><div class="board_writer" style="user-select: auto;">작성자</div></div>';
+        }
+        $("#board-list-background").html(tag)
+    }
 </script>
