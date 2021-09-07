@@ -4,7 +4,7 @@
 <mapper namespace="info.jongwoo.Boot_pj_01.mapper.BoardMapper">
 
     <select id="boardList" resultType="info.jongwoo.Boot_pj_01.domain.BoardDTO">
-        SELECT bno,btitle FROM board
+        SELECT * FROM board
     </select>
 
     <select id = "getItem" resultType="info.jongwoo.Boot_pj_01.domain.BoardDTO">

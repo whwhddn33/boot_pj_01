@@ -6,10 +6,10 @@ import java.util.List;
 
 public interface BoardService {
 
-    List<BoardDTO> boardList(BoardDTO bdto) throws Exception;
 
+
+    List<BoardDTO> boardList();
     BoardDTO getItem(int bno);
-
     int register(BoardDTO bdto);
 
 }

@@ -25,7 +25,7 @@
     <script src="/assets/js/validation.js"></script>
     <script src="/assets/js/datepicker.js"></script>
     <script src="/assets/js/datepicker.kr.js"></script>
-
+    <script src ="/assets/js/boardService.js"></script>
 </head>
 
 <body>

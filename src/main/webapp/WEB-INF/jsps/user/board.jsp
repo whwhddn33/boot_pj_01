@@ -5,6 +5,8 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <!--study-content -->
+
+
 <div id = "study-content">
 
     <!--main left-->
@@ -18,15 +20,15 @@
 
         <!--board-list-background-->
         <div id = "board-list-background">
-        <div class="write-area">
-            <div class = "write-title-wrapper">
-                <div class = "title-notice">제목 : </div>
-                <div class = "title-content" contenteditable="true"></div>
+            <div class="write-area">
+                <div class = "write-title-wrapper">
+                    <div class = "title-notice">제목 : </div>
+                    <div class = "title-content" contenteditable="true"></div>
+                </div>
+                <div class = "write-content-wrapper">
+                    <div class = "write-content" contenteditable="true"></div>
+                </div>
             </div>
-            <div class = "write-content-wrapper">
-                <div class = "write-content" contenteditable="true"></div>
-            </div>
-        </div>
 
             <!--table head-->
             <div class = "board_list_wrap">
@@ -79,19 +81,13 @@
     //view ajax
     $(".main").on("click",".board_list_wrap.contents",function(){
         console.log("/list/"+$(this).find(".board_no").text());
-        $.ajax({
-            url:"/list/"+$(this).find(".board_no").text(),
-            dataType:"json",
-            success:function (result){
+        var bno = $(this).find(".board_no").text()
+        boardService.list(
+            bno,
+            function(result){
                 $(".view-contents").html(result.bcontent);
-            },
-            error:function (requestStatus,textStatus,err){
-                alert("fail")
-                console.log(requestStatus)
-                console.log(textStatus)
-                console.log(err)
             }
-        });
+        );
     });
 
     $("#board-btn-area").on("click",".basic-btn",function() {
@@ -107,37 +103,35 @@
             $(".board_list_wrap").show();
             $(".write-btn").css("visibility", "hidden");
         } else {
+            var url = "/regist";
             var btitle = $(".title-content").text();
             var bcontent = $(".write-content").text();
             var bdto = {btitle,bcontent};
 
-
             if(btitle != ''||bcontent!=''){
-                $.ajax({
-                    type: "post",
-                    url: "/list/regist",
-                    data:JSON.stringify(bdto),
-                    contentType: "application/json;",
-                    success:function(result){
+                boardService.write(url,bdto,
+                    function(){
                         $(".basic-btn.change").text("글쓰기");
                         $(".write-area").hide();
                         $(".board_list_wrap").show();
                         $(".write-btn").css("visibility", "hidden");
-                    },
-                    error: function (rstats,textstat,err) {
-                        console.log(rstats)
-                        console.log(textstat)
-                        console.log(err)
+                        boardService.getList(
+                            function(result){
+                                console.log(result)
+                                var blast = result[result.length-1];
+                                var tag = '<div class="board_list_wrap contents" style="user-select: auto;"><div class="board_no" style="user-select: auto;">'+blast.bno+'</div><div class="board_title" style="user-select: auto;">'+blast.btitle+'</div><div class="board_writer" style="user-select: auto;">작성자</div></div>';
+                                console.log(tag);
+                                $("#board-list-background").append(tag)
+
+                            }
+                        );
                     }
-                });
+                )
+
             }else{
                 alert("제목,내용이 비었습니다.")
             }
         }
     });
-
-
-
-
 
 </script>

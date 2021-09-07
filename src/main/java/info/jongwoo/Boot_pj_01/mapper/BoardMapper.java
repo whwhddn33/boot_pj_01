@@ -7,7 +7,7 @@ import java.util.List;
 
 @Mapper
 public interface BoardMapper {
-    List<BoardDTO> boardList(BoardDTO bdto) throws Exception;
+    List<BoardDTO> boardList();
 
     BoardDTO getItem(int bno);
 

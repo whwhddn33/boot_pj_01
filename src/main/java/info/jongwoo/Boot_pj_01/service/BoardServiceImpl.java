@@ -13,28 +13,16 @@ import java.util.List;
 public class BoardServiceImpl implements BoardService{
 
     @Autowired
-    private BoardMapper boardMapper;
+    BoardMapper boardMapper;
+
 
     @Override
-    public List<BoardDTO> boardList(BoardDTO bdto) throws Exception {
-
-        bdto.setBno(bdto.getBno());
-        bdto.setBtitle(bdto.getBtitle());
-        bdto.setBcontent(bdto.getBcontent());
-
-        return boardMapper.boardList(bdto);
-    }
+    public List<BoardDTO> boardList(){return boardMapper.boardList();}
 
     @Override
-    public BoardDTO getItem(int bno) {return boardMapper.getItem(bno);}
+    public BoardDTO getItem(int bno){return boardMapper.getItem(bno);}
 
     @Override
-    public int register(BoardDTO bdto){
-        log.info("serviceImpl register");
-        log.info("serviceImpl register");
-        log.info("serviceImpl register");
-        log.info("serviceImpl register");
-        log.info("serviceImpl register");
-        log.info(bdto);
-        return boardMapper.register(bdto);}
+    public int register(BoardDTO bdto){return boardMapper.register(bdto);}
+
 }

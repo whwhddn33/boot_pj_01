@@ -26,9 +26,8 @@ public class BoardController {
     public ModelAndView board() throws Exception{
 
         ModelAndView model = new ModelAndView("/board"+ Const.uTiles); // 모델객체
-        BoardDTO bdto = new BoardDTO();
 
-        List<BoardDTO> boardList = boardService.boardList(bdto);
+        List<BoardDTO> boardList = boardService.boardList();
         model.addObject("boardlist",boardList);
         log.info(model.toString());
 

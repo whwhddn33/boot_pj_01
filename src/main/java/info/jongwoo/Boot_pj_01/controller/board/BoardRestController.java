@@ -10,6 +10,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @Log4j2
 @RequestMapping("/list/*")
@@ -27,15 +29,15 @@ public class BoardRestController {
     public ResponseEntity<String> write(@RequestBody BoardDTO bdto){
         log.info(bdto);
         log.info("===========================================");
-        log.info("===========================================");
-        log.info("===========================================");
-        log.info("===========================================");
-        log.info("===========================================");
-        log.info("===========================================");
-        log.info("===========================================");
-        log.info("===========================================");
         int insertCnt = boardService.register(bdto);
         log.info(insertCnt);
+
         return insertCnt == 1 ? new ResponseEntity<String>("success", HttpStatus.OK):new ResponseEntity<String>("fail",HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @GetMapping(value = "/getList",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<BoardDTO>> getList() {
+        List<BoardDTO> blist = boardService.boardList();
+        return new ResponseEntity<List<BoardDTO>>(blist, HttpStatus.OK);
     }
 }
