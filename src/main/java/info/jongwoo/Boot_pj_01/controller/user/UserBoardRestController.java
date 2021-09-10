@@ -22,16 +22,12 @@ public class BoardRestController {
 
     @GetMapping(value = "/{bno}",produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<BoardDTO> getItem(@PathVariable int bno){
-        log.info("request");
         return new ResponseEntity<BoardDTO>(boardService.getItem(bno), HttpStatus.OK);
     }
+
     @PostMapping(value = "/regist",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.TEXT_PLAIN_VALUE)
     public ResponseEntity<String> write(@RequestBody BoardDTO bdto){
-        log.info(bdto);
-        log.info("===========================================");
         int insertCnt = boardService.register(bdto);
-        log.info(insertCnt);
-
         return insertCnt == 1 ? new ResponseEntity<String>("success", HttpStatus.OK):new ResponseEntity<String>("fail",HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
@@ -40,4 +36,6 @@ public class BoardRestController {
         List<BoardDTO> blist = boardService.boardList();
         return new ResponseEntity<List<BoardDTO>>(blist, HttpStatus.OK);
     }
+
+
 }
