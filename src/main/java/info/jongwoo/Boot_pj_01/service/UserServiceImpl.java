@@ -27,4 +27,9 @@ public class UserServiceImpl implements UserSerivce {
         userMapper.userInsert(userDTO);
     }
 
+    @Override
+    public UserDTO loginCheck(UserDTO udto) {
+        return userMapper.loginCheck(udto);
+    }
+
 }

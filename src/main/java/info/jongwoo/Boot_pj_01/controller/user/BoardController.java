@@ -1,4 +1,4 @@
-package info.jongwoo.Boot_pj_01.controller.board;
+package info.jongwoo.Boot_pj_01.controller.user;
 
 
 import info.jongwoo.Boot_pj_01.common.Const;

@@ -10,4 +10,5 @@ public interface UserSerivce {
 
     void userInsert(UserDTO userDTO) throws Exception;
 
+    UserDTO loginCheck(UserDTO udto);
 }

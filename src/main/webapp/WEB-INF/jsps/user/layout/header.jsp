@@ -15,6 +15,17 @@
         <a class = "nava nava-5" href="/">임시헤더</a>
     </div>
 
+    <div id = "dev-info">
+        click
+    </div>
+    <div id = "info-window">
+<%--        application<br><br>${applicationScope}<br><br>--%>
+        session<br><br>${sessionScope}<br><br>
+<%--        request<br><br>${requestScope}<br><br>--%>
+<%--        page<br><br>${pageScope}<br><br>--%>
+<%--        header<br><br>${header}<br><br>--%>
+    </div>
+
 </header>
 
 <script>
@@ -39,4 +50,11 @@
                 break;
         }
     });
+
+    $("#dev-info").click(function(){
+        if ($("#info-window").hasClass("active")){
+            $("#info-window").removeClass("active")
+        }else $("#info-window").addClass("active");
+
+    })
 </script>

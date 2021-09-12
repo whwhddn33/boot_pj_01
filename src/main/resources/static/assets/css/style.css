@@ -60,6 +60,48 @@ footer{
     width: 5vw;
 }
 
+#dev-info{
+    position: fixed;
+    display: flex;
+    width: 2vw;
+    height: 2vw;
+    align-items: center;
+    background-color: #007aff;
+    top :2vw;
+    left:2vw;
+    border-radius: 100%;
+    font-size: .8vw;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#info-window{
+    position: fixed;
+    width: 70vw;
+    height: 40vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10000;
+    padding: 1vh 1vw;
+    font-size: 1vw;
+    color: black;
+    display: none;
+    overflow: auto;
+    background-color: white;
+}
+#info-window.active{
+    display: flex;
+
+}
+
+
+
+
 #main-content{
     display: flex;
     width: 100%;

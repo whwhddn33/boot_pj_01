@@ -10,6 +10,10 @@
             <input type="password" name="password" id="password" placeholder="패스워드를 입력하세요.">
             <a href="javascript:void(0)" id="loginBtn">로그인하기</a>
         </form>
+
+        <div>
+        userid = ${userno}
+        </div>
     </div>
 
     <div class ="main right">
@@ -19,6 +23,8 @@
             <button type="submit">가입</button>
         </form>
     </div>
+
+
 </div>
 
 <script>

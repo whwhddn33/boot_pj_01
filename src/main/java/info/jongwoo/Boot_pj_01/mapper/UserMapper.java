@@ -12,4 +12,5 @@ public interface UserMapper {
 
     void userInsert(UserDTO userDTO) throws Exception;
 
+    UserDTO loginCheck(UserDTO udto);
 }
