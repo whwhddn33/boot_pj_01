@@ -17,4 +17,7 @@
         values (#{btitle}, #{bcontent})
     </insert>
 
+
+    del
+
 </mapper>

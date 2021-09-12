@@ -1,4 +1,4 @@
-package info.jongwoo.Boot_pj_01.controller.board;
+package info.jongwoo.Boot_pj_01.controller.user;
 
 
 import info.jongwoo.Boot_pj_01.domain.BoardDTO;
@@ -15,7 +15,7 @@ import java.util.List;
 @RestController
 @Log4j2
 @RequestMapping("/list/*")
-public class BoardRestController {
+public class UserBoardRestController {
 
     @Autowired
     BoardService boardService;

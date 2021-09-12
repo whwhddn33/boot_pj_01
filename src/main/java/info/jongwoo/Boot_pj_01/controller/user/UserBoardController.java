@@ -1,4 +1,4 @@
-package info.jongwoo.Boot_pj_01.controller.board;
+package info.jongwoo.Boot_pj_01.controller.user;
 
 
 import info.jongwoo.Boot_pj_01.common.Const;
@@ -16,11 +16,8 @@ import java.util.List;
 @Controller
 @Log4j2
 @RequestMapping("/board")
-public class BoardController {
+public class UserBoardController {
 
-
-    @Autowired
-    private BoardService boardService;
 
     @GetMapping("/list")
     public ModelAndView board(){

@@ -1,4 +1,4 @@
-package info.jongwoo.Boot_pj_01.controller.chat;
+package info.jongwoo.Boot_pj_01.controller.user;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @Log4j2
 @RequestMapping("/chat")
-public class ChatController {
+public class UserChatController {
 
     /*@Autowired
     private ChatService chatService;

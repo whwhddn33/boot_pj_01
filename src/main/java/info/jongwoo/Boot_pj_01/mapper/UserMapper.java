@@ -1,6 +1,7 @@
 package info.jongwoo.Boot_pj_01.mapper;
 
 import info.jongwoo.Boot_pj_01.domain.UserDTO;
+import org.apache.catalina.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -12,4 +13,5 @@ public interface UserMapper {
 
     void userInsert(UserDTO userDTO) throws Exception;
 
+    UserDTO loginCheck(UserDTO userDTO);
 }
