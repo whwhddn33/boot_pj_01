@@ -15,7 +15,7 @@ import java.util.List;
 @RestController
 @Log4j2
 @RequestMapping("/list/*")
-public class BoardRestController {
+public class UserBoardRestController {
 
     @Autowired
     BoardService boardService;

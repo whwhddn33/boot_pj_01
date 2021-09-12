@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 @Log4j2
 @RequestMapping("/member")
-public class UserMainController {
+public class UserMemberController {
 
     @Autowired
     private UserSerivce userService;

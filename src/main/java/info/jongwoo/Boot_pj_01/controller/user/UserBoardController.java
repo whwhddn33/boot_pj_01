@@ -16,13 +16,13 @@ import java.util.List;
 @Controller
 @Log4j2
 @RequestMapping("/board")
-public class BoardController {
+public class UserBoardController {
 
 
     @Autowired
     private BoardService boardService;
 
-    @GetMapping("/list")
+    @GetMapping("")
     public ModelAndView board(){
         ModelAndView model = new ModelAndView("/board"+ Const.uTiles); // 모델객체
         return model;
