@@ -26,6 +26,7 @@
     <script src="/assets/js/datepicker.js"></script>
     <script src="/assets/js/datepicker.kr.js"></script>
     <script src ="/assets/js/boardService.js"></script>
+    <script src ="/assets/js/chatService.js"></script>
 </head>
 
 <body>

@@ -277,3 +277,43 @@ table.user-list-table th, table.user-list-table td {
     visibility: hidden;
 }
 
+#chat-list-area{
+    width: 100%;
+}
+
+.chat-list-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 2vh 2vw;
+    width: 100%;
+}
+
+.room-no{
+    display: flex;
+    gap: 10px;
+    width: 10%;
+}
+.room-title{
+
+    display: flex;
+    gap: 10px;
+    width: 60%;
+}
+.room-max{
+    display: flex;
+    gap: 10px;
+    width: 10%;
+}
+.room-current{
+    display: flex;
+    gap: 10px;
+    width: 10%;
+}
+.room-master{
+    display: flex;
+    gap: 10px;
+    width: 20%;
+}
